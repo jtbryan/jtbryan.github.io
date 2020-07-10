@@ -1,4 +1,4 @@
-.pubs-header{z-index:1;text-align:center;color:#fff;position:absolute;top:30%;left:50%;margin:0 auto;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.pubs-header{z-index:1;text-align:center;color:#fff;position:absolute;top:30% !important;left:50%;margin:0 auto;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 
 #pubs-container{
     margin: auto;
@@ -18,5 +18,5 @@
 .pubs-title{font-size:40px;display:block;line-height:1;color:#fff}
 
 #invis-container .footer{
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
