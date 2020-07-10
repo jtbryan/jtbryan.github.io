@@ -11,3 +11,19 @@
 #datab{flex: 1 0 60%}
 #FaL{flex: 1 0 60%}
 #tools{flex: 1 0 60%}
+
+#pubs-container{
+    margin: auto;
+    width: 50%;
+}
+
+#pubs-container ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+#pubs-container ul li{
+    list-style: none;
+    flex: 0 0 33.333333%;
+}
