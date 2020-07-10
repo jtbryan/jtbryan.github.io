@@ -27,3 +27,5 @@
     list-style: none;
     flex: 0 0 33.333333%;
 }
+
+.site-title{font-size:30px;display:block;line-height:1;color:#fff}
