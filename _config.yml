@@ -1,5 +1,5 @@
 # Site settings
-title: My Portfolio
+title: Jonathan Bryan | Portfolio
 description: A blog about my passions and project history
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://jtbryan.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
