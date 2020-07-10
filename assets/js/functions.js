@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $(".images-right").css('visibility', 'visible').hide().fadeIn();
+    $(".images-right").css('visibility', 'visible').hide();
  });
