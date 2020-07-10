@@ -1,3 +1,3 @@
-window.fadeInLeft = function(obj) {
+window.fadeIn = function(obj) {
     $(obj).fadeIn(1000);
 }
