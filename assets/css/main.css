@@ -17,6 +17,13 @@
     flex: 0 0 33.333333%;
 }
 
+@media only screen and (min-width: 201px) and (max-width: 700px){
+    .user ul li{
+        list-style: none;
+        flex: 0 0 100%;
+    }
+}
+
 #front{flex: 1 0 60%}
 #back{flex: 1 0 60%}
 #datab{flex: 1 0 60%}
