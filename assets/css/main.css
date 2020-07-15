@@ -12,7 +12,7 @@
     padding-left: 0;
 }
 
-#pubs-container ul li{
+.user ul li{
     list-style: none;
     flex: 0 0 33.333333%;
 }
