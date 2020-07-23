@@ -27,7 +27,73 @@
   }
 }
 
+.user ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.user ul li{
+  list-style: none;
+  flex: 0 0 33.333333%;
+}
+
+@media only screen and (min-width: 201px) and (max-width: 700px){
+  .user ul li{
+      list-style: none;
+      flex: 0 0 100%;
+  }
+}
+
+#front{flex: 1 0 60%}
+#back{flex: 1 0 60%}
+#datab{flex: 1 0 60%}
+#FaL{flex: 1 0 60%}
+#tools{flex: 1 0 60%}
+#cloud img{width: 170px;}
+
+@media only screen and (min-width: 10px) and (max-width: 1200px){
+  #cloud img{width: 150px;}
+}
+
 .user-details {
   text-align: center;
   margin: 5px auto;
+}
+
+.user i, .user img {
+  visibility: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  visibility: visible !important;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  opacity: 0;
 }
