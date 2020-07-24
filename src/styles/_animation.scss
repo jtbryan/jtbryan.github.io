@@ -1,4 +1,4 @@
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulsetime {
     from {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
         filter: alpha(opacity=40);
@@ -20,7 +20,7 @@
     }
 }
 
-@keyframes pulse {
+@keyframes pulsetime {
     from {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
         filter: alpha(opacity=40);
@@ -39,5 +39,27 @@
         filter: alpha(opacity=40);
         opacity: .4;
         top: 0
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+  
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
     }
 }

@@ -110,8 +110,8 @@
       width: 100px;
       height: 100px;
       fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
+      -webkit-animation: pulsetime 1.3s infinite !important;
+      animation: pulsetime 1.3s infinite !important;
       &:hover {
         color: $sec;
       }

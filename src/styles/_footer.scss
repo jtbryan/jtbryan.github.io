@@ -4,6 +4,7 @@
   margin-top: 100px;
   text-align: center;
   color: #FFF;
+  display: flex;
   .love {
     color: red;
   }
@@ -17,5 +18,64 @@
     &:active {
       color: $sec;
     }
+  }
+  #info {
+    flex: 0 0 50%;
+    text-align: left;
+    padding-left: 5%;
+    animation-delay: .5s; 
+    animation-name: fadeInLeft;
+  }
+  #contact-info {
+    width: 27%;
+    form {
+      visibility: visible; 
+      animation-delay: .5s; 
+      animation-name: fadeInRight;
+    }
+  }
+}
+
+.form-input {
+  margin-bottom:15px;
+  input[type=text]{
+    margin:0;
+    padding:10px;
+    border-radius:4px;
+    border:0;
+    box-shadow:1px 1px 8px 1px #ccc;
+    width:100%;
+    font-size:1em;
+  }
+  textarea{
+    margin:0;
+    padding:10px;
+    border-radius:4px;
+    border:0;
+    box-shadow:1px 1px 8px 1px #ccc;
+    width:100%;
+    font-size:1em;
+  }
+  .span-12{
+    .mobile-text-center{
+    }
+  }
+}
+#email-submit{
+  min-width:150px;
+  background-color:#67d5fd;
+  border:none;
+  border-radius:4px;
+  padding:10px 12px;
+  font-size:1em;
+  color:black;
+  box-shadow: 1px 1px 2px 0px #2bc1f7;
+  &:hover{
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 800px){
+  #email-submit{
+    min-width:100%
   }
 }

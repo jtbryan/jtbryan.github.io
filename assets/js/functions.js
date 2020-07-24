@@ -1,10 +1,12 @@
 $(document).ready(function() {
-    checkAnimation();
+    checkAboutAnimation();
+    checkContactAnimation();
 })
 
 // Capture scroll events
 $(window).scroll(function(){
-    checkAnimation();
+    checkAboutAnimation();
+    checkContactAnimation();
 });
 
 function isElementInViewport(elem) {
@@ -16,13 +18,12 @@ function isElementInViewport(elem) {
 }
 
 // Check if it's time to start the animation.
-function checkAnimation() {
+function checkAboutAnimation() {
     var $elem = $('.tech');
 
     $elem.each(function(i, cur){
         if(!$(cur).hasClass("seen")){
             if (isElementInViewport($(cur))) {
-                console.log($(cur).find('#icon').length)
                 // Start the animation
                 $(cur).addClass('seen');
                 time = 150;
@@ -44,6 +45,29 @@ function checkAnimation() {
                         i*time)
                     });
                 }
+            }
+        }
+    })
+}
+
+// Check if it's time to start the animation.
+function checkContactAnimation() {
+    var $elem = $('#contact-info');
+
+    $elem.each(function(i, cur){
+        if(!$(cur).hasClass("seen")){
+            if (isElementInViewport($(cur))) {
+                // Start the animation
+                $(cur).addClass('seen');
+                time = 350;
+                $(cur).find('form').each(function (i, el) {
+                    setTimeout( 
+                        function(){ 
+                            $(el).addClass('animated')
+                            $('#info').addClass('animated')
+                        }, 
+                    i*time)
+                });
             }
         }
     })
