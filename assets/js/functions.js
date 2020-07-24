@@ -1,6 +1,8 @@
 $(document).ready(function() {
     checkAboutAnimation();
-    checkContactAnimation();
+    if(checkContactAnimation()){
+        window.scrollTo(0,document.body.scrollHeight);
+    }
 })
 
 // Capture scroll events
@@ -68,7 +70,10 @@ function checkContactAnimation() {
                         }, 
                     i*time)
                 });
+                return true;
             }
         }
     })
+
+    return false;
 }
