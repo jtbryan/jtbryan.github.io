@@ -17,20 +17,23 @@ function isElementInViewport(elem) {
 
 // Check if it's time to start the animation.
 function checkAnimation() {
-    var $elem = $('.user');
+    var $elem = $('.tech');
 
-    if(!$elem.hasClass("seen")){
-        if (isElementInViewport($elem)) {
-            // Start the animation
-            $elem.addClass('seen');
-            time = 150;
-            $('.user #icon').each(function (i, el) {
-                setTimeout( 
-                    function(){ 
-                        $(el).addClass('animated')
-                    }, 
-                i*time)
-            });
+    $elem.each(function(i, cur){
+        if(!$(cur).hasClass("seen")){
+            if (isElementInViewport($(cur))) {
+                console.log($(cur).find('#icon').length)
+                // Start the animation
+                $(cur).addClass('seen');
+                time = 150;
+                $(cur).find('#icon').each(function (i, el) {
+                    setTimeout( 
+                        function(){ 
+                            $(el).addClass('animated')
+                        }, 
+                    i*time)
+                });
+            }
         }
-    }
+    })
 }
