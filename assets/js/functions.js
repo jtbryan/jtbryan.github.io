@@ -26,13 +26,24 @@ function checkAnimation() {
                 // Start the animation
                 $(cur).addClass('seen');
                 time = 150;
-                $(cur).find('#icon').each(function (i, el) {
-                    setTimeout( 
-                        function(){ 
-                            $(el).addClass('animated')
-                        }, 
-                    i*time)
-                });
+                if($(cur).attr("id") == "front"){
+                    $(cur).find('i').each(function (i, el) {
+                        setTimeout( 
+                            function(){ 
+                                $(el).addClass('animated')
+                            }, 
+                        i*time)
+                    });
+                }
+                else{
+                    $(cur).find('#icon').each(function (i, el) {
+                        setTimeout( 
+                            function(){ 
+                                $(el).addClass('animated')
+                            }, 
+                        i*time)
+                    });
+                }
             }
         }
     })
