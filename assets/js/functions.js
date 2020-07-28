@@ -1,8 +1,6 @@
 $(document).ready(function() {
     checkAboutAnimation();
-    if(checkContactAnimation()){
-        window.scrollTo(0,document.body.scrollHeight);
-    }
+    checkContactAnimation()
 })
 
 // Capture scroll events
@@ -60,6 +58,7 @@ function checkContactAnimation() {
         if(!$(cur).hasClass("seen")){
             if (isElementInViewport($(cur))) {
                 // Start the animation
+                console.log("found")
                 $(cur).addClass('seen');
                 time = 350;
                 $(cur).find('form').each(function (i, el) {
