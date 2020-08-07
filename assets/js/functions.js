@@ -1,6 +1,14 @@
 $(document).ready(function() {
     checkAboutAnimation();
-    checkContactAnimation()
+    checkContactAnimation();
+    if($(".active").attr("id") == "academic"){
+        $("#academic-view").css("visibility", "visible")
+        $("#personal-view").css("display", "none")
+    }
+    else{
+        $("#personal-view").css("visibility", "visible")
+        $("#academic-view").css("display", "none")
+    }
 })
 
 // Capture scroll events
@@ -58,7 +66,6 @@ function checkContactAnimation() {
         if(!$(cur).hasClass("seen")){
             if (isElementInViewport($(cur))) {
                 // Start the animation
-                console.log("found")
                 $(cur).addClass('seen');
                 time = 350;
                 $(cur).find('form').each(function (i, el) {
@@ -76,3 +83,35 @@ function checkContactAnimation() {
 
     return false;
 }
+
+function displayAcademic(){
+    $("#academic-view").toggle("normal",function(){
+        $("#academic-view .academic").each()
+    })
+}
+
+function displayPersonal(){
+
+}
+
+$(".project-button").on("click", function(){
+    if($(this).hasClass('active')){
+        return
+    }
+    else{
+        $(".project-button.active").removeClass("active")
+        $(this).addClass("active")
+        if($(this).attr("id") == "academic"){
+            $("#personal-view").css("display", "none")
+            $("#personal-view").css("visibility", "hidden")
+            $("#academic-view").css("visibility", "visible")
+            $("#academic-view").css("display", "block")
+        }
+        else{
+            $("#academic-view").css("display", "none")
+            $("#academic-view").css("visibility", "hidden")
+            $("#personal-view").css("visibility", "visible")
+            $("#personal-view").css("display", "block")
+        }
+    }
+})

@@ -1,7 +1,11 @@
 <div class="user-details">
-  <h1> My Projects </h1>
+  <h1> Projects </h1>
+  <button id="academic" class="project-button active">Academic Projects</button>
+  <button id="personal" class="project-button">Personal Projects</button>
 </div>
-<div class="user-projects">
+<div id="academic-view">
+<div class="user-projects academic">
+  <div class="academic-projects"></div>
   <div class="images-right">
     <img alt="vocacoord" src="/assets/img/VCLogo.png"/>
   </div>
@@ -23,7 +27,9 @@
     <a class="project-link" target="_blank" href="https://vocacoord.com">Website</a>
   </div>
 </div>
-<div class="user-projects">
+</div>
+<div id="personal-view">
+<div class="user-projects personal">
   <div class="images-left">
     <img alt="hashscrape" src="/assets/img/hash_logov4.png"/>
   </div>
@@ -45,4 +51,5 @@
     </p>
     <a class="project-link" target="_blank" href="https://github.com/jtbryan/HashScrape">Github repo</a>
   </div>
+</div>
 </div>
