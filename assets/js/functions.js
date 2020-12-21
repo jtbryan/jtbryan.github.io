@@ -9,22 +9,35 @@ $(document).ready(function() {
         $("#personal-view").css("visibility", "visible")
         $("#academic-view").css("display", "none")
     }
-    /*
     $('#email-submit-form').on('submit', function(e) {
         e.preventDefault();
         $.ajax({
             url : $(this).attr('action') || window.location.pathname,
-            type: "GET",
+            type: "POST",
             data: $(this).serialize(),
             success: function (data) {
-                $("#form_output").html(data);
+                $("#email-submit").css("background-color", "#4bb543")
+                $("#email-submit").css("box-shadow", "1px 1px 2px 0px #000000");
+                $("#email-submit").attr("disabled", true)
+                setTimeout(() => {
+                    $("#email-submit").css("background-color", "#67d5fd")
+                    $("#email-submit").css("box-shadow", "1px 1px 2px 0px #2bc1f7");
+                    $("#email-submit").attr("disabled", false)
+                }, 1500);
             },
             error: function (jXHR, textStatus, errorThrown) {
-                alert(errorThrown);
+                $("#email-submit").css("background-color", "#ff0033")
+                $("#email-submit").css("box-shadow", "1px 1px 2px 0px #000000");
+                $("#email-submit").attr("disabled", true)
+                setTimeout(() => {
+                    $("#email-submit").css("background-color", "#67d5fd")
+                    $("#email-submit").css("box-shadow", "1px 1px 2px 0px #2bc1f7");
+                    $("#email-submit").attr("disabled", false)
+                }, 1500);
+                console.log(errorThrown)
             }
         });
     })
-    */
 })
 
 // Capture scroll events
