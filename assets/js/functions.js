@@ -9,6 +9,22 @@ $(document).ready(function() {
         $("#personal-view").css("visibility", "visible")
         $("#academic-view").css("display", "none")
     }
+    /*
+    $('#email-submit-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url : $(this).attr('action') || window.location.pathname,
+            type: "GET",
+            data: $(this).serialize(),
+            success: function (data) {
+                $("#form_output").html(data);
+            },
+            error: function (jXHR, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    })
+    */
 })
 
 // Capture scroll events
