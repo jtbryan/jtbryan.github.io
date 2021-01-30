@@ -8,18 +8,19 @@
             <p>Built with Jekyll inspired by <a href="https://github.com/nrandecker">Nathan Randecker</a></p>
         </div>
         <div id="contact-info">
-            <form action="MAILTO:jonnib24@gmail.com" method="post" enctype="text/plain" data-wow-delay="0.4s" class="wow fadeInRight">
+            <!--Use getforms for all email transactions-->
+            <form id="email-submit-form" method="post" action="https://getform.io/f/424bc1e5-f302-4c04-8854-35b4ba5f6662" data-wow-delay="0.4s" class="wow fadeInRight">
                 <div class="form-input span-12">
                     <label for="name" class="sr-only">Name:</label>
                     <input type="text" name="name" placeholder="Name">
                 </div>
                 <div class="form-input span-12">
                     <label for="mail" class="sr-only">Email</label>
-                    <input type="text" name="mail" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
                 <div class="form-input span-12">
                     <label for="comment" class="sr-only">Comment:</label>
-                    <textarea type="text" name="comment" placeholder="Your message." rows="5"></textarea>
+                    <textarea type="text" name="message" placeholder="Your message." rows="5"></textarea>
                 </div>
                 <div class="form-submit span-12 mobile-text-center">
                     <input id="email-submit" type="submit" value="Send">

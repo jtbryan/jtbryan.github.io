@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var cp = require('child_process');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
+var php = require("gulp-connect-php");
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -78,6 +79,19 @@ gulp.task('js', function() {
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
+});
+
+gulp.task('default', function() {
+    php.server({
+        // a standalone PHP server that browsersync connects to via proxy
+        port: 8000,
+        keepalive: true,
+        base: "dist"
+    }, function (){
+        browsersync({
+            proxy: '127.0.0.1:8000'
+        });
+    });
 });
 
 gulp.task('watch', function() {
