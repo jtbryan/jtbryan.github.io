@@ -1,13 +1,13 @@
 # Site settings
 title: Jonathan Bryan | Portfolio
-description: A blog about my passions and project history
+description: A blog about my project history and experience
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://jtbryan.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Jonathan Bryan
-user_description: I am a passionate Undergraduate Research Assistant at the University of Tennessee studying Computer Science with a minor in Cybersecurity. My experience lies mostly in Back-End and Full Stack development with my preferred languages being Python/C++. My primary topics of interest are in Cybersecurity and Data Science.
-user_title: Software Developer
+user_description: I am a passionate Software Engineer and Researcher, currently working as a Software Engineer contractor for Datagee, LLC and as a Machine Learning intern at the Oak Ridge National Laboratory. I am a recent graduate from the University of Tennessee, where I obtained my B.S. in Computer Science with a minor in Cybersecurity. Following my graduation, I plan to continue my academic career at Georgia Insitute of Technology starting Fall 2021. My experience lies primarily in Back-End and Full Stack development with my preferred languages being Python/C++/C. My topics of interest are in Cybersecurity and Machine Learning.
+user_title: Software Engineer
 email: jonnib24@gmail.com
 github_username:  jtbryan
 

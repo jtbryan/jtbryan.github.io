@@ -9,6 +9,16 @@ $(document).ready(function() {
         $("#personal-view").css("visibility", "visible")
         $("#academic-view").css("display", "none")
     }
+
+    if($(".active").attr("id") == "research"){
+        $("#research-view").css("visibility", "visible")
+        $("#professional-view").css("display", "none")
+    }
+    else{
+        $("#professional-view").css("visibility", "visible")
+        $("#research-view").css("display", "none")
+    }
+
     $('#email-submit-form').on('submit', function(e) {
         e.preventDefault();
         $.ajax({
@@ -120,7 +130,9 @@ function displayAcademic(){
 }
 
 function displayPersonal(){
-
+    $("#personal-view").toggle("normal",function(){
+        $("#personal-view .personal").each()
+    })
 }
 
 $(".project-button").on("click", function(){
@@ -141,6 +153,28 @@ $(".project-button").on("click", function(){
             $("#academic-view").css("visibility", "hidden")
             $("#personal-view").css("visibility", "visible")
             $("#personal-view").css("display", "block")
+        }
+    }
+})
+
+$(".experience-button").on("click", function(){
+    if($(this).hasClass('active')){
+        return
+    }
+    else{
+        $(".experience-button.active").removeClass("active")
+        $(this).addClass("active")
+        if($(this).attr("id") == "academic"){
+            $("#professional-view").css("display", "none")
+            $("#professional-view").css("visibility", "hidden")
+            $("#research-view").css("visibility", "visible")
+            $("#research-view").css("display", "block")
+        }
+        else{
+            $("#research-view").css("display", "none")
+            $("#research-view").css("visibility", "hidden")
+            $("#professional-view").css("visibility", "visible")
+            $("#professional-view").css("display", "block")
         }
     }
 })
